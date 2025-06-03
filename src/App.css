@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(Fonts/Gilmer-Font/Gilmer\ Bold.otf);
+}
+
+:root {
+  --primary_font: "IBM Plex Sans", sans-serif;
+  --second_font: myFirstFont;
+  --links_nav_color: #8b8b8b;
+  --primary_color: #6536dd;
+  --primary_color_text : #8453ff;
+}

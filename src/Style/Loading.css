@@ -1,0 +1,48 @@
+#boder_load {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(5, 5, 5, 0.744);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999999999;
+}
+
+
+
+/* From Uiverse.io by gharsh11032000 */ 
+.loader {
+
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+    animation: spin 3s infinite;
+  }
+  
+  .loader::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(20px);
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(-45deg);
+    }
+  
+    50% {
+      transform: rotate(-360deg);
+      border-radius: 50%;
+    }
+  
+    100% {
+      transform: rotate(-45deg);
+    }
+  }
