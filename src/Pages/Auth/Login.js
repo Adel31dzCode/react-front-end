@@ -138,7 +138,7 @@ export default function Login() {
     EmailGoogle 
         ? <span className="red_wrong">This Email Must Be Logining in With Google</span> 
         : InvalidMatch ? <span className="red_wrong">Invalid Email Or Password</span> : "Type Your Email And Password"
-    : (isFlag) ? "Type Correct Email And Password" : "Type Your Email And Password"}
+    : (!isFlag) ? "Type Correct Email And Password" : "Type Your Email And Password"}
 </p>
 
             <button className="submit_auth">Login</button>
