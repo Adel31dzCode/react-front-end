@@ -297,6 +297,9 @@ to {transform: rotate(360deg);}
 * {
     cursor: none !important;
 }
+#body_auth {
+    background-image: url(../Svg/animited_mob.svg) !important;
+}
 .center-auth-page1 {
     background-color: transparent;
 
@@ -364,5 +367,17 @@ to {transform: rotate(360deg);}
 }
 .or_auth::after {
     width: 150px;
+}
+.form_auth label span {
+    top: 3px;
+}
+.red_wrong {
+    color: #ff4d3a !important;
+}
+.exp_auth {
+    padding: 5px 0 5px 4%;
+}
+.ask_for_acc {
+    padding: 20px 4% 5px;
 }
 }

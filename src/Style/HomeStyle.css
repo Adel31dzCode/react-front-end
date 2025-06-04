@@ -1058,7 +1058,7 @@ to {transform: translateY(-20px)}
 }
 
 .swiper-backface-hidden .swiper-slide {
-    margin-right: 200px !important;
+    margin-right: 100px !important;
 }
 
 /* تخصيص شكل الأسهم */
@@ -1233,7 +1233,7 @@ to {transform: translateY(-20px)}
     text-align: center;
 }
 .swiper-backface-hidden .swiper-slide {
-    margin-right: 300px !important;
+    margin-right: 250px !important;
 }
 #title_third_interface {
     font-size: 42px;
@@ -1399,12 +1399,14 @@ to {
     width: 100%;
     font-size: 20px;
     border: none;
+    text-align: center;
 }
 #ul_auth_interface .auth_log:nth-child(2) {
     border-radius: 0 0 15px 15px;
     padding: 10px 25px;
     width: 100%;
     font-size: 20px;
+    text-align: center;
 }
 #burger_menu_nav {
     display: block;

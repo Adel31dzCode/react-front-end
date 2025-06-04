@@ -83,6 +83,13 @@ export default function Navbar() {
 
 
 
+function logout() {
+  cookie.remove('Portfolio_RefreshToken', { path: '/' });
+  cookie.remove('Portfolio_AccessToken', { path: '/' });
+
+    window.location.href = '/';
+  };
+  
 
     return (
         <nav id="nav_interface" ref={navRef}>
@@ -131,7 +138,7 @@ export default function Navbar() {
 
     <ul id="sub_menu_nav">
       <li><i className="fa-solid fa-address-card"></i>  Profile</li>
-      <li><i className="fa-solid fa-right-from-bracket"></i>   Log Out</li>
+      <li onClick={logout}><i className="fa-solid fa-right-from-bracket"></i>   Log Out</li>
     </ul>
   </ul>
 

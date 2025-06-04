@@ -1,0 +1,56 @@
+<svg width="100%" height="100vh" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <defs>
+    <!-- الشبكة الثابتة -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" stroke="#404040" stroke-width="0.5" fill="none" />
+    </pattern>
+
+    <!-- خط عمودي متحرك -->
+    <g id="v-line">
+      <rect x="-0.6" y="0" width="1.2" height="60" fill="white" opacity="0.08" rx="1" />
+    </g>
+
+    <!-- خط أفقي متحرك -->
+    <g id="h-line">
+      <rect x="0" y="-0.6" width="60" height="1.2" fill="white" opacity="0.08" ry="1" />
+    </g>
+  </defs>
+
+  <!-- الخلفية -->
+  <rect width="100%" height="100%" fill="#212121" />
+
+  <!-- الشبكة -->
+  <rect width="100%" height="100%" fill="url(#grid)" />
+
+  <!-- الخطوط العمودية المتحركة -->
+  <g>
+    <use href="#v-line">
+      <animateTransform attributeName="transform" type="translate" from="40 440" to="40 -60" dur="5s" repeatCount="indefinite" />
+    </use>
+    <use href="#v-line">
+      <animateTransform attributeName="transform" type="translate" from="160 460" to="160 -60" dur="6s" repeatCount="indefinite" />
+    </use>
+    <use href="#v-line">
+      <animateTransform attributeName="transform" type="translate" from="280 480" to="280 -60" dur="7s" repeatCount="indefinite" />
+    </use>
+    <use href="#v-line">
+      <animateTransform attributeName="transform" type="translate" from="400 450" to="400 -60" dur="5.5s" repeatCount="indefinite" />
+    </use>
+  </g>
+
+  <!-- الخطوط الأفقية المتحركة -->
+  <g>
+    <use href="#h-line">
+      <animateTransform attributeName="transform" type="translate" from="520 80" to="-60 80" dur="6s" repeatCount="indefinite" />
+    </use>
+    <use href="#h-line">
+      <animateTransform attributeName="transform" type="translate" from="520 160" to="-60 160" dur="7s" repeatCount="indefinite" />
+    </use>
+    <use href="#h-line">
+      <animateTransform attributeName="transform" type="translate" from="520 240" to="-60 240" dur="5.5s" repeatCount="indefinite" />
+    </use>
+    <use href="#h-line">
+      <animateTransform attributeName="transform" type="translate" from="520 320" to="-60 320" dur="6.5s" repeatCount="indefinite" />
+    </use>
+  </g>
+</svg>

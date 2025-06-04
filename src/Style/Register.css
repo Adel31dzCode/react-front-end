@@ -267,6 +267,9 @@ to {transform: rotate(360deg);}
 * {
     cursor: none;
 }
+#body_auth {
+    background-image: url(../Svg/animited_mob.svg) !important;
+}
 .center-auth-page {
     height: 95vh;
 }

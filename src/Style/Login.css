@@ -1,5 +1,5 @@
 
-#body_auth {
+#body_auth1 {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -7,11 +7,16 @@
     align-items: center;
     background-image: url(../Svg/animited.svg);
 }
-.logo-auth {
+#logo_link {
     position: absolute;
-    width: 70px;
     left: 20px;
     top: 10px;
+    width: 70px;
+    height: 70px;
+    z-index: 5;
+}
+.logo-auth {
+    width: 70px;
     color: #fff;
 }
 #type_design {
@@ -24,7 +29,7 @@
 }
 .center-auth-page-login {
     width: 650px;
-    height: 650px;
+    height: 600px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -79,7 +84,7 @@ to {transform: rotate(360deg);}
     color: #fff;
     padding: 10px 0 5px;
 }
-.describe_registering {
+.describe_registering1 {
     font-size: 16px;
     color: rgb(212, 212, 212);
     font-family: var(--primary_font);
@@ -268,7 +273,7 @@ to {transform: rotate(360deg);}
     cursor: none;
 }
 .center-auth-page-login {
-    height: 95vh;
+    height: 600px;
 }
 .form_auth label {
     margin: 20px auto 0;
@@ -278,6 +283,9 @@ to {transform: rotate(360deg);}
 @media (max-width: 700px) {
 * {
     cursor: none !important;
+}
+#body_auth1 {
+    background-image: url(../Svg/animited_mob.svg) !important;
 }
 .center-auth-page-login {
     background-color: transparent;
@@ -292,9 +300,9 @@ to {transform: rotate(360deg);}
 .form_auth label {
     width: 95%;
 }
-#body_auth {
+#body_auth1 {
     height: auto;
-    min-height: 130vh;
+    min-height: 100vh;
 }
 .form_auth label input:focus + span, .form_auth label input:not(:placeholder-shown) + span {
     top: -20px;
@@ -311,13 +319,13 @@ to {transform: rotate(360deg);}
 .logo-auth {
     width: 50px;
 }
-.describe_registering {
-    padding: 0 5px;
+.describe_registering1 {
+    padding: 10px 5px 20px;
 }
 .center-auth-page-login {
     overflow-y: auto;
     padding-bottom: 30px;
-    height: 130vh;
+    height: 100vh;
 }
 .title_auth {
     font-size: 42px;

@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import Loading from './../../Components/Loading';
 import axios from 'axios';
-import { API, RegisterApi } from './../../Additions/API';
+import { API, RegisterApi, EmailSend } from './../../Additions/API';
 import Cookie  from 'universal-cookie';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -64,7 +64,7 @@ export default function Register() {
         if (Flag) {
           try {
             // خطوة: إرسال كود التحقق إلى الإيميل
-            const res = await axios.post('http://127.0.0.1:8000/api/email/send-code', {
+            const res = await axios.post(`${API}${EmailSend}`, {
               email: Form.email,
             });
       
@@ -188,13 +188,13 @@ export default function Register() {
                         </p>
                 
                     <button className="submit_auth">Create Account</button>
-                    <p className="ask_for_acc">You Have An Account? <Link href={"/login"}>Log In</Link></p>
+                    <p className="ask_for_acc">You Have An Account? <a href={"/login"}>Log In</a></p>
                 </form>
                 
                 <p className="or_auth">OR</p>
 
                 <button id="google_auth"  onClick={() => {
-  window.location.href = "http://localhost:8000/api/auth/google/redirect";
+  window.location.href = `${API}auth/google/redirect`;
 }}><img src={google_icon} alt="Google Icon" className="google-icon-auth" /> Sign Up With Google</button>
                 <p></p>
             </div>

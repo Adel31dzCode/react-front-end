@@ -2,7 +2,7 @@ import '../../Style/CheckMail.css';
 import { useEffect, useState } from 'react';
 import Loading from './../../Components/Loading';
 import axios from 'axios';
-import { API, RegisterApi } from './../../Additions/API';
+import { API, RegisterApi, ResendCode, EmailSend } from './../../Additions/API';
 import Cookie from 'universal-cookie';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 
@@ -46,7 +46,7 @@ export default function CheckCode() {
       SetExpiredCode(false);
       SetSomethingWrong(false);
     try {
-      const res = await axios.post('http://127.0.0.1:8000/api/email/verify-code', {
+      const res = await axios.post(`${API}${ResendCode}`, {
         email,
         code
       });
@@ -95,7 +95,7 @@ export default function CheckCode() {
     setLoading(true);
     if (ReSending === "Send Again") {
     try {
-      const res = await axios.post('http://127.0.0.1:8000/api/email/send-code', {email});
+      const res = await axios.post(`${API}${EmailSend}`, {email});
       SetReSending("Code Sent. (We Send Code Only 2 Times, Try To Type It This Time)");
       console.log(res);
       setLoading(false)

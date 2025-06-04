@@ -1,4 +1,3 @@
-import '../../Style/Login.css';
 import google_icon from '../../Img/google-icon.png';
 import { useEffect, useState } from 'react';
 import Loading from './../../Components/Loading';
@@ -6,6 +5,7 @@ import axios from 'axios';
 import { API, LoginApi } from './../../Additions/API';
 import Cookie from 'universal-cookie';
 import { Link, useNavigate } from 'react-router-dom';
+import '../../Style/Login.css';
 
 
 export default function Login() {
@@ -79,44 +79,15 @@ export default function Login() {
     };
   };
 
-  // دالة التعامل مع نجاح تسجيل دخول Google
-  const handleGoogleLoginSuccess = async (credentialResponse) => {
-    setIsLoading(true);
-    try {
-      const id_token = credentialResponse.credential;
-      // ترسل التوكن للباك
-      const res = await axios.post(`${API}auth/google-signin`, { id_token });
-
-      cookie.set("Portfolio_AccessToken", res.data.access_token, {
-        path: "/",
-        secure: true,
-        sameSite: "strict"
-      });
-
-      cookie.set("Portfolio_RefreshToken", res.data.refresh_token, {
-        path: "/",
-        secure: true,
-        sameSite: "strict"
-      });
-
-      setIsLoading(false);
-      navigate("/");
-    } catch (error) {
-      console.log("Google login error:", error);
-
-
-
-      setIsLoading(false);
-    }
-  };
-  console.log(EmailGoogle)
+  
   return (
-    <div id="body_auth">
+    <div id="body_auth1">
       {isLoading && <Loading />}
 
-      <a href="/">
+      
+      <a href="/" id='logo_link'>
         <svg className="logo-auth" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" width="24">
-          <path d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+        <path d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
         </svg>
       </a>
 
@@ -129,7 +100,7 @@ export default function Login() {
 
         <div id="continer_saver_auth">
           <h1 className="title_auth">Login</h1>
-          <p className="describe_registering">
+          <p className="describe_registering1">
             Login With Your Account Now, Your Datas Are Saved In The App
           </p>
 
@@ -171,7 +142,7 @@ export default function Login() {
 
 
             <button id="google_auth"  onClick={() => {
-              window.location.href = "http://localhost:8000/api/auth/google/redirect";
+              window.location.href = `${API}auth/google/redirect`;
               }}><img src={google_icon} alt="Google Icon" className="google-icon-auth" />Login with Google
             </button>
             
