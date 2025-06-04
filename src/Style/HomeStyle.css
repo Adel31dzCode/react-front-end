@@ -196,7 +196,7 @@
 }
 .scrolled {
     backdrop-filter: blur(2px);
-    background-color: #a1a1a138;
+    background-color: #26262673;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.148);
 }
 
@@ -637,7 +637,7 @@ to {transform: translateY(-20px)}
 }
 
 .image_continer_interface img {
-    width: 380px;
+    width: 100%;
     height: 280px;
     object-fit: cover; /* تجعل الصورة تملأ الحاوية بشكل أنيق */
     border-radius: 15px 15px 0 0;
@@ -1058,7 +1058,7 @@ to {transform: translateY(-20px)}
 }
 
 .swiper-backface-hidden .swiper-slide {
-    margin-right: 100px !important;
+    margin-right: 150px !important;
 }
 
 /* تخصيص شكل الأسهم */
@@ -1096,6 +1096,9 @@ to {transform: translateY(-20px)}
 @media (max-width: 1550px) {
 .splide__slide {
     margin-right: 0px !important;
+}
+.swiper-backface-hidden .swiper-slide {
+    margin-right: 200px !important;
 }
 #title_third_interface {
     padding: 0 50px 70px;
@@ -1305,6 +1308,9 @@ to {transform: translateY(-20px)}
 * {
     cursor: none;
 }
+#sec_interface {
+    background-image: url(../Svg/grid_mob.svg);
+}
 .swiper-backface-hidden .swiper-slide {
     margin-right: 0px !important;
     width: 380px !important;
@@ -1357,7 +1363,7 @@ to {
     position: fixed;
     width: 70%;
     height: 100%;
-    background-color: #3c3c3c;
+    background-color: #262626ed;
     flex-direction: column;
     right: -100%;
     top: 60px;
@@ -1378,6 +1384,7 @@ to {
     height: auto;
     margin: 20px 0;
     background-color: #3c3c3c91;
+    padding: 5px 0;
 }
 #ul_nav_interface a {
     width: 100%;
@@ -1407,6 +1414,7 @@ to {
     width: 100%;
     font-size: 20px;
     text-align: center;
+    background-color: #ddd;
 }
 #burger_menu_nav {
     display: block;

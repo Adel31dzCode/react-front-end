@@ -98,7 +98,7 @@ export default function Register() {
 {IsLoading && <Loading />}
 
         <a href={"/"}>
-            <svg className="logo-auth" fill="none"  stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <svg data-aos="fade-up" className="logo-auth" fill="none"  stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
             </svg>
         </a>
@@ -113,8 +113,8 @@ export default function Register() {
             </div>
 
             <div id="continer_saver_auth">
-                <h1 className="title_auth">Register</h1>
-                <p className="describe_registering">
+                <h1 className="title_auth" data-aos="fade-up">Register</h1>
+                <p className="describe_registering" data-aos="fade-up">
                     Create Your Own Account Now, In My App, This Info Will Be Saved In Databaes Which It Can Be controlled In All Directions
                 </p>
 
@@ -199,7 +199,7 @@ export default function Register() {
 
                 <button id="google_auth"  onClick={() => {
   window.location.href = `${API}auth/google/redirect`;
-}}><img src={google_icon} alt="Google Icon" className="google-icon-auth" /> Sign Up With Google</button>
+}}><img src={google_icon} alt="Google Icon" className="google-icon-auth"  /> Sign Up With Google</button>
                 <p></p>
             </div>
 

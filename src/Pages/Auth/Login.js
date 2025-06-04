@@ -89,7 +89,7 @@ export default function Login() {
       {isLoading && <Loading />}
 
       
-      <a href="/" id='logo_link'>
+      <a href="/" id='logo_link' data-aos="fade-up">
         <svg className="logo-auth" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" width="24">
         <path d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
         </svg>
@@ -103,8 +103,8 @@ export default function Login() {
         </div>
 
         <div id="continer_saver_auth">
-          <h1 className="title_auth">Login</h1>
-          <p className="describe_registering1">
+          <h1 className="title_auth" data-aos="fade-up" >Login</h1>
+          <p className="describe_registering1" data-aos="fade-up">
             Login With Your Account Now, Your Datas Are Saved In The App
           </p>
 
@@ -116,8 +116,9 @@ export default function Login() {
                 placeholder=" "
                 onChange={handleChange}
                 value={form.email}
+                data-aos="fade-up-right"
               />
-              <span>Email:</span>
+              <span data-aos="fade-up-right">Email:</span>
             </label>
 
             <label>
@@ -127,8 +128,9 @@ export default function Login() {
                 placeholder=" "
                 onChange={handleChange}
                 value={form.password}
+                data-aos="fade-up-right"
               />
-              <span>Password:</span>
+              <span data-aos="fade-up-right">Password:</span>
             </label>
             <p className="exp_auth">
   {isSubmitted ? 
