@@ -76,6 +76,9 @@ export default function Login() {
         }
         setIsLoading(false);
       }
+    } else {
+      setIsLoading(false);
+
     };
   };
 
