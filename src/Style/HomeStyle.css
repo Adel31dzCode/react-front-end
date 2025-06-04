@@ -1333,6 +1333,7 @@ to {transform: translateY(-20px)}
     background-color: transparent;
     width: 100%;
     top: 105%;
+    background-color: #343334;
 }
 #sub_menu_nav li {
     color: #fff;
