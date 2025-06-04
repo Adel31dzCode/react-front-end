@@ -116,9 +116,8 @@ export default function Login() {
                 placeholder=" "
                 onChange={handleChange}
                 value={form.email}
-                data-aos="fade-up-right"
               />
-              <span data-aos="fade-up-right">Email:</span>
+              <span >Email:</span>
             </label>
 
             <label>
@@ -128,16 +127,15 @@ export default function Login() {
                 placeholder=" "
                 onChange={handleChange}
                 value={form.password}
-                data-aos="fade-up-right"
               />
-              <span data-aos="fade-up-right">Password:</span>
+              <span >Password:</span>
             </label>
             <p className="exp_auth">
   {isSubmitted ? 
     EmailGoogle 
         ? <span className="red_wrong">This Email Must Be Logining in With Google</span> 
         : InvalidMatch ? <span className="red_wrong">Invalid Email Or Password</span> : "Type Your Email And Password"
-    : null}
+    : "Type Your Email And Password"}
 </p>
 
             <button className="submit_auth">Login</button>
