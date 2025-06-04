@@ -79,6 +79,10 @@ export default function Login() {
     };
   };
 
+  useEffect(() => {
+    document.title = "Login | Adel31_dz's Portfolio";
+  }, []);
+
   
   return (
     <div id="body_auth1">

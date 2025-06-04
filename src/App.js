@@ -22,6 +22,7 @@ function App() {
       <Route path="/google-success" element={<GoogleSuccess />} />
       <Route path="/google-error" element={<GoogleError />} />
     </Route>
+    <Route path="/*" element={<GoogleError />} />
 
 
     </Routes>

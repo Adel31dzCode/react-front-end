@@ -33,6 +33,9 @@ export default function CheckCode() {
     }
   }, [code]);
   
+  useEffect(() => {
+    document.title = "Verify Email | Adel31_dz's Portfolio";
+  }, []);
 
 
   async function verifyCode(e) {

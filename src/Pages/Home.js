@@ -13,9 +13,14 @@ import DoughnutChart from '../Components/DoughnutChart';
 import MyLineChart from '../Components/MyLineChart';
 import SlideShow from './../Components/SlideShow';
 import "../Style/HomeStyle.css";
+import { useEffect } from 'react';
 
 
 export default function Home() {
+  useEffect(() => {
+    document.title = "Home | Adel31_dz's Portfolio";
+  }, []);
+
   return (
     <div id='home_body'>
     <Navbar />

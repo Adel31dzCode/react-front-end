@@ -86,6 +86,10 @@ export default function Register() {
           SetIsLoading(false);
         }
       }
+
+      useEffect(() => {
+        document.title = "Register | Adel31_dz's Portfolio";
+      }, []);
       
     return (
 
