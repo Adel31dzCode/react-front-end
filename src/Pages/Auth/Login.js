@@ -9,6 +9,7 @@ import '../../Style/Login.css';
 
 
 export default function Login() {
+  console.log(API);
   const [form, setForm] = useState({ email: '', password: '' });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [InvalidMatch, SetInvalidMatch] = useState(false);
