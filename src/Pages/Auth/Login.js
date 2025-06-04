@@ -33,7 +33,8 @@ export default function Login() {
       form.password.length <= 22
     ) {
         setFlag(true);
-    }
+    } else {
+      setFlag(false);
   }, [form]);
 
   function handleChange(e) {
