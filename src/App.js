@@ -29,14 +29,12 @@ function App() {
       <Route path="/register" element={<Register />}/>
       <Route path="/login" element={<Login />}/>
       <Route path="/checkVerification" element={<CheckCode />}/>
-
     </Route>
 
-      <Route path="/google-success" element={<GoogleSuccess />} />
-      <Route path="/google-error" element={<GoogleError />} />
-  
-    <Route path="/*" element={<GoogleError />} />
 
+    <Route path="/*" element={<GoogleError />} />
+    <Route path="/google-success" element={<GoogleSuccess />} />
+    <Route path="/google-error" element={<GoogleError />} />
 
     </Routes>
   );

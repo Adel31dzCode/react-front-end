@@ -133,7 +133,7 @@ function logout() {
 
           {UserData && UserData.name ?
   <ul id="ul_logged_nav">
-    <img className="avatar_user_nav" src={avatar}/>
+    <img className="avatar_user_nav" src={avatar} alt="avatar user"/>
     <span>Adel31_dz  <i className="fa-solid fa-chevron-down"></i></span>
 
     <ul id="sub_menu_nav">

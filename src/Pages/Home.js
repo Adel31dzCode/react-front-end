@@ -29,7 +29,7 @@ export default function Home() {
     <p id="portfolio_para_interface">Portfolio</p>
     <GlowingText />
     <div id="div_img_interface" data-aos="fade-in">
-      <img src={logo} />
+      <img src={logo} alt="photo"/>
     </div>
     <div id="div_devider_content_interface">
       <div id="content-one">
@@ -63,6 +63,7 @@ export default function Home() {
             className="icon_verticality_interface"
             src={icon2}
             height={42}
+            alt="photo"
           />
         </p>
         <p id="content_interface" data-aos="fade-up-right">
@@ -78,6 +79,7 @@ export default function Home() {
             className="icon_verticality_interface"
             src={icon3}
             height={42}
+            alt="photo"
           />{" "}
           :
         </h1>
@@ -101,6 +103,7 @@ export default function Home() {
             className="icon_verticality_interface"
             src={icon4}
             height={42}
+            alt="photo"
           />{" "}
           :
         </h1>
@@ -219,10 +222,12 @@ export default function Home() {
       <img
         className="svg_static_interface"
         src={icon5}
+        alt="photo"
       />
       <img
         className="svg_static_interface_second"
         src={icon6}
+        alt="photo"
       />
       <div className="stat-item">
         <div className="stat-content">

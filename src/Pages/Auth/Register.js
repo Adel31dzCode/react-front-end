@@ -11,7 +11,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 
 export default function Register() {
-
+  console.log(API + "auth/google/redirect")
     useEffect(() => {
         const animations = document.querySelectorAll('animateTransform');
         animations.forEach(anim => {
@@ -198,8 +198,9 @@ export default function Register() {
                 <p className="or_auth">OR</p>
 
                 <button id="google_auth"  onClick={() => {
-  window.location.href = `${API}auth/google/redirect`;
-}}><img src={google_icon} alt="Google Icon" className="google-icon-auth"  /> Sign Up With Google</button>
+              window.location.href = `${API}auth/google/redirect`;
+              }}><img src={google_icon} alt="Google Icon" className="google-icon-auth" />Sign Up with Google
+            </button>
                 <p></p>
             </div>
 
