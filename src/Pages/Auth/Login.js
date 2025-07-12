@@ -139,10 +139,16 @@ export default function Login() {
             <p className="exp_auth">
   {isSubmitted ? 
     EmailGoogle 
-        ? <span className="red_wrong">This Email Must Be Logining in With Google</span> 
-        : InvalidMatch ? <span className="red_wrong">Invalid Email Or Password</span> : "Type Your Email And Password"
-    : (!isFlag) ? "Type Correct Email And Password" : "<span className="red_wrong">Type Your Email And Password</span>"}
+      ? <span className="red_wrong">This Email Must Be Logining in With Google</span> 
+      : InvalidMatch 
+        ? <span className="red_wrong">Invalid Email Or Password</span> 
+        : <span>Type Your Email And Password</span>
+    : !isFlag 
+      ? "Type Correct Email And Password" 
+      : <span className="red_wrong">Type Your Email And Password</span>
+  }
 </p>
+
 
             <button className="submit_auth">Login</button>
             <p className="ask_for_acc">Don't Have An Account? <Link to="/register">Register</Link></p>
