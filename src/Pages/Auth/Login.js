@@ -23,19 +23,21 @@ export default function Login() {
     animations.forEach(anim => anim.beginElement());
   }, []);
 
-  useEffect(() => {
-    const emailValid = /\S+@\S+\.\S+/.test(form.email);
-    if(
-      form.email.length >= 12 &&
-      form.email.length <= 28 &&
-      emailValid &&
-      form.password.length >= 8 &&
-      form.password.length <= 22
-    ) {
-        setFlag(true);
-    } else {
-      setFlag(false);
-  }, [form]);
+ useEffect(() => {
+  const emailValid = /\S+@\S+\.\S+/.test(form.email);
+  if (
+    form.email.length >= 12 &&
+    form.email.length <= 28 &&
+    emailValid &&
+    form.password.length >= 8 &&
+    form.password.length <= 22
+  ) {
+    setFlag(true);
+  } else {
+    setFlag(false);
+  }
+}, [form]); // ✅ القوس المغلق الآن في مكانه الصحيح
+
 
   function handleChange(e) {
     const { name, value } = e.target;
